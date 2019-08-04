@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:paddingStart="16dp"
+    android:paddingLeft="16dp"
+    android:paddingEnd="16dp"
+    android:paddingRight="16dp">
+    <!--android:orientation="vertical"-->
+
+    <TextView
+        android:id="@+id/headline_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="2"
+        android:paddingTop="10dp"
+        android:textSize="16sp"
+        app:fontFamily="sans-serif-medium"
+        tools:text="This is a test headline to check if the content fits inside and I'm seeing how long can this go on for and what is the limit" />
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headline_text_view"
+        android:layout_gravity="center"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/section_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:paddingTop="4dp"
+            android:textSize="16sp"
+            tools:text="Section: World News" />
+
+        <TextView
+            android:id="@+id/date_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:paddingTop="4dp"
+            android:textSize="12sp"
+            tools:text="Published On June 29, 2018" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/author_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout1"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:gravity="end"
+        android:textSize="12sp"
+        tools:text="By J.K. Rowling" />
+
+</RelativeLayout>
